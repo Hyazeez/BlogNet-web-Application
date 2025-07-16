@@ -1,0 +1,54 @@
+<section class="hero">
+    <div class="main">
+        <div class="banner-container" style="position: relative;">
+            <img src="assets/bg4.jpg" alt="blogbanner" class="bannerimg" style="width:100%; display:block;" />
+            <div class="banner-content" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center;">
+                <p>Welcome to our blog! Discover insightful articles, latest updates, and engaging stories from our community.</p>
+                <p>Browse through a variety of topics, share your thoughts in the comments, and stay connected with fellow readers.</p>
+                <p>Don't forget to subscribe for notifications on new posts and exclusive content.</p>
+                <div class="button-group" style="margin-top: 20px;">
+                    <a href="/create-blog"><button class="butt">Click here to create your blog</button></a>
+                    <a href="/view-blogs"><button class="butt">View Blog</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="quotebox">
+    <section class="box">
+        <div class="bor p-4 p-md-5 mb-4 rounded">
+            <div class="col-md-6 px-0">
+                <h1>Words that inspire. Thoughts that connect.</h1>
+                <p class="lead my-3">This is a dynamic blogging platform where users can create and publish posts, 
+                <br> leave comments, and explore articles in real time.</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="full">
+  <h2 class="section-title">Authors</h2>
+
+  <section class="author">
+    <div class="row d-flex flex-wrap justify-content-start">
+      <div
+        *ngFor="let item of userList; let i = index; trackBy: trackByFn"
+        class="cardmain m-3 p-4 shadow-sm text-center"
+      >
+        <img
+          [src]="item.photoUrl || 'assets/bg5.png'"
+          (error)="onImgError($event)"
+          class="card-img-top rounded-circle mx-auto"
+          alt="Author image"
+        />
+
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <h6 class="text-muted">{{ item.title }}</h6>
+          <p class="limit-text">{{ item.description }}</p>
+          <a [routerLink]="['/author', item.id]" class="btn-view">View More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

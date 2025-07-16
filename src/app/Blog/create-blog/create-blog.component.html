@@ -1,0 +1,28 @@
+<section class="full">
+    <div class="head">
+        <h1 class="title">Enter Your Blog Details</h1>
+        <form id="blog-form" (ngSubmit) = "postUser()" #formRef="ngForm">
+            <table class="table">
+                <tr class="table-row">
+                    <td class="text"><label for="name">Enter your name :-</label></td>
+                    <td><input type="text" id="name" name="name" placeholder="Name" required [(ngModel)]="user.name"/></td>
+                </tr><br>
+                <tr class="table-row">
+                    <td class="text"><label for="title">Blog title :-</label></td>
+                    <td><input type="text" id="title" name="title" placeholder="Title" required [(ngModel)]="user.title"/></td>
+                </tr><br>
+                <tr class="table-row">
+                    <td class="text"><label for="photourl">Photo URL :-</label></td>
+                    <td><input type="text" id="photourl" name="photourl" placeholder="PhotoUrl" required [(ngModel)]="user.photoUrl"/></td>
+                </tr><br>
+                <tr class="table-row">
+                    <td class="text"><label for="description">Blog Description :-</label></td>
+                    <td><textarea type="text" id="description" name="description" placeholder="Description" required [(ngModel)]="user.description"></textarea></td>
+                </tr><br>
+            </table>
+            <div class="butt">
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
