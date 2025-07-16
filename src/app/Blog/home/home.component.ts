@@ -35,7 +35,7 @@ export class HomeComponent {
 
   onImgError(event:Event){
     const target=event.target as HTMLImageElement;
-    target.src='assets/bg5.png';
+    target.src='assets/image/default.jpg';
   }
 
   trackByFn(index:number,item:any){

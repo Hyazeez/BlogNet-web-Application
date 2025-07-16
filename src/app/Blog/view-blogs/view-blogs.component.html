@@ -8,15 +8,15 @@
         class="cardmain m-3 p-4 shadow-sm text-center"
       >
         <img
-          [src]="item.photoUrl || 'assets/bg5.png'"
+          [src]="item.photoUrl || 'assets/image/default.jpg'"
           (error)="onImgError($event)"
           class="card-img-top rounded-circle mx-auto"
           alt="{{ item.name }}'s image"
         />
 
         <div class="card-body">
-          <h5 class="card-title">{{ item.name }}</h5>
-          <h6 class="text-muted">{{ item.title }}</h6>
+          <h2 class="card-title">{{ item.name }}</h2>
+          <h4 class="text-muted">{{ item.title }}</h4>
           <p class="limit-text">{{ item.description }}</p>
           <button [routerLink]="['/author', item.id]" class="btn-view">View More</button>
         </div>
