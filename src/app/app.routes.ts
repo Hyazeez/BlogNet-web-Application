@@ -30,5 +30,9 @@ export const routes: Routes = [
     {
         path: 'last',
         component:LastComponent
+    },
+    {
+        path: 'author/:id',
+        component:AuthorComponent
     }
 ];

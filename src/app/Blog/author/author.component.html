@@ -1,1 +1,33 @@
-<p>author works!</p>
+<section class="full">
+    <section class="author-section">
+        <div class="author-card" *ngIf="UserAttributes">
+            <h2>Author Details</h2>
+            <img [src]="UserAttributes.photoUrl || 'assets/image/default.jpg'" (error)="onImgError($event)" class="author-img" />
+            <h3>{{UserAttributes.name}}</h3>
+            <p><strong>Title: </strong>{{UserAttributes.title}}</p>
+            <p>{{UserAttributes.description}}</p>
+            <p><strong>Likes: </strong>{{UserAttributes.like ? UserAttributes.like : 0}}</p>
+            <button class="like" (click)="likeAuthor()">❤ Like</button>
+        </div>
+
+        <div class="comment-section">
+            <h3>Comments</h3>
+            <div *ngIf="commentsList.length > 0; else noComments">
+                <ul>
+                    <li *ngFor="let comment of commentsList">
+                        {{comment.content}}
+                        <button class="del" (click)="deleteComment(comment.id)">⛔</button>
+                    </li>
+                </ul>
+            </div>
+            <ng-template #noComments>
+                <p>No Comments Yet.</p>
+            </ng-template>
+        </div>
+        <div class="add-comment">
+            <h3>Add Comment</h3>
+            <input type="text" [(ngModel)]="commentContent" placeholder="Write a comment..."/>
+            <button (click)="addComment()">Submit</button>
+        </div>
+    </section>
+</section>

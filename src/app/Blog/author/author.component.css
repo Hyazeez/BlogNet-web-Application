@@ -1,0 +1,137 @@
+.full {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgb(255, 209, 149);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.author-section {
+  max-width: 800px;
+  width: 100%;
+  background-color: rgba(111, 247, 240, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.author-card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.author-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #041a58;
+  margin-bottom: 1rem;
+}
+
+.author-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 24px;
+  color: #000000;
+}
+
+.author-card h3 {
+  font-size: 20px;
+  color: #000000;
+}
+
+.author-card p {
+  font-size: 16px;
+  color: #000000;
+}
+
+.like {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff3860;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.like:hover {
+  background-color: #e0274f;
+}
+
+.comment-section h3 {
+  font-size: 20px;
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.comment-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.comment-section li {
+  background-color: #f0f0f0;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-section .del {
+  background-color: transparent;
+  border: none;
+  color: #d11a2a;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.add-comment h3 {
+  margin-top: 2rem;
+  font-size: 20px;
+  color: #333;
+}
+
+.add-comment input[type="text"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.add-comment button {
+  padding: 0.5rem 1.5rem;
+  background-color: #3273dc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-comment button:hover {
+  background-color: #276cda;
+}
+
+@media screen and (max-width: 600px) {
+  .author-section {
+    padding: 1rem;
+  }
+
+  .author-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .like,
+  .add-comment button {
+    width: 100%;
+  }
+}
